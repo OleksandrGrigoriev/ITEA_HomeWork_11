@@ -1,7 +1,7 @@
 package org.hw11task4;
 
 public class Main implements Runnable{
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Thread mainThread = new Thread(new Main());
         mainThread.setName("main");
@@ -13,6 +13,12 @@ public class Main implements Runnable{
         mainThread.start();
         firstThread.start();
         secondThread.start();
+
+        mainThread.join();
+        firstThread.join();
+        secondThread.join();
+
+        System.out.println("Some message");
     }
 
     @Override
