@@ -11,9 +11,11 @@ public class AddressBook {
     @XmlElement(name = "address")
     private List<Address> addressList = new ArrayList<>();
 
-    public AddressBook() {
-        addressList = new ArrayList<>();
-    }
+    public AddressBook() {}
+
+//    public AddressBook() {
+//        addressList = new ArrayList<>();
+//    }
     public void add(Address adress) {
         addressList.add(adress);
     }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addressBook>
+    <address>
+        <city>Kiyv</city>
+        <house_number>40</house_number>
+        <street>Lesi Ukrayinky str.</street>
+    </address>
+    <address>
+        <city>Cherkassy</city>
+        <house_number>31</house_number>
+        <street>Pryportova str.</street>
+    </address>
+</addressBook>

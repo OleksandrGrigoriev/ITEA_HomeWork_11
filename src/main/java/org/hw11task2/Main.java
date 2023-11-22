@@ -14,7 +14,7 @@ public class Main {
         adressBook.add(new Address("Cherkassy", "Pryportova str.", 31));
 
         try {
-            File output = new File("src/main/java/org/hw11task2/output.xml");
+            File output = new File("E:\\IteaJavaPro\\homework11\\src\\main\\java\\org\\hw11task2\\output.xml");
 
             JAXBContext jaxbContext = JAXBContext.newInstance(AddressBook.class);
             Marshaller marshaller = jaxbContext.createMarshaller();
