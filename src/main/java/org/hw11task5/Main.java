@@ -5,30 +5,10 @@ public class Main {
         Object objA = new Object();
         Object objB = new Object();
 
-        Thread t1 = new Thread("ThreadOne") {
-            public void run() {
-                synchronized (objA) {
-                    System.out.println("A is synchronized from " + Thread.currentThread().getName());
-                    synchronized (objB) {
-                        System.out.println("B is synchronized from " + Thread.currentThread().getName());
-                    }
-                }
-            }
-        };
-
-        Thread t2 = new Thread("ThreadTwo") {
-            public void run() {
-                synchronized (objB) {
-                    System.out.println("B is synchronized from " + Thread.currentThread().getName());
-                    synchronized (objA) {
-                        System.out.println("A is synchronized from " + Thread.currentThread().getName());
-                    }
-                }
-            }
-        };
+        ThreadOne t1 = new ThreadOne(objA, objB);
+        ThreadTwo t2 = new ThreadTwo(objA, objB);
 
         t1.start();
         t2.start();
-
     }
 }
